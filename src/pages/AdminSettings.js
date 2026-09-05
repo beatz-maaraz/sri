@@ -290,8 +290,8 @@ const AdminSettings = () => {
                   <option value="EUR">EUR (€)</option>
                 </select>
               </div>
-              <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '16px', backgroundColor: 'var(--bg-body)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                <input type="checkbox" id="maintenance" checked={settings.maintenanceMode} onChange={(e) => handleChange('maintenanceMode', e.target.checked)} style={{ width: '20px', height: '20px', accentColor: 'var(--accent-primary)' }} />
+              <div className="form-group" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '12px', padding: '16px', backgroundColor: 'var(--bg-body)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <input type="checkbox" id="maintenance" checked={settings.maintenanceMode} onChange={(e) => handleChange('maintenanceMode', e.target.checked)} style={{ width: '20px', height: '20px', accentColor: 'var(--accent-primary)', flexShrink: 0 }} />
                 <label htmlFor="maintenance" style={{ fontWeight: 600, cursor: 'pointer', flex: 1, userSelect: 'none' }}>
                   Enable Maintenance Mode
                   <span style={{ display: 'block', fontWeight: 400, color: 'var(--text-muted)', fontSize: '13px', marginTop: '4px' }}>Hide the storefront from customers while making updates.</span>

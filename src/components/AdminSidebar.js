@@ -4,8 +4,14 @@ import { NavLink } from 'react-router-dom';
 const AdminSidebar = () => {
   return (
     <aside className="admin-sidebar">
-      <div className="admin-brand">
-        <div className="logo-icon" style={{ width: 32, height: 32, fontSize: 16 }}>SA</div>
+      <div className="admin-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <img 
+          src="/logo.png" 
+          alt="Admin Logo" 
+          style={{ width: '32px', height: '32px', objectFit: 'contain' }}
+          onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+        />
+        <div className="logo-icon" style={{ width: 32, height: 32, fontSize: 16, display: 'none' }}>SA</div>
         <h2>Sri Art Admin</h2>
       </div>
       <nav className="admin-nav">
